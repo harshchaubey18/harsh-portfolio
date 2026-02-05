@@ -3,106 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Harsh Chaubey | Laravel Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
-            margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
             background: #f4f6f8;
-            color: #2b2b2b;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            text-align: center;
-            background: #1e3a5f;
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f, #274c77);
             color: #fff;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            text-align: center;
         }
 
-        header img {
-            width: 140px;
-            height: 140px;
+        .hero img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 4px solid #fff;
             object-fit: cover;
             margin-bottom: 15px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 34px;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        section {
+        .section-card {
             background: #fff;
-            margin-top: 25px;
+            border-radius: 10px;
             padding: 30px;
-            border-radius: 6px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
-        h2 {
-            margin-top: 0;
+        .section-title {
             color: #1e3a5f;
             border-bottom: 2px solid #e1e6eb;
             padding-bottom: 6px;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
 
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
+        .skill-badge {
+            background: #e9f1fb;
+            color: #1e3a5f;
+            padding: 8px 12px;
+            border-radius: 20px;
+            margin: 6px;
+            display: inline-block;
+            font-size: 14px;
         }
 
         .project-card {
-            border: 1px solid #e5e7eb;
-            padding: 16px;
-            border-radius: 8px;
+            border: none;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
         }
 
-        .project-card h3 {
-            margin-top: 0;
-            color: #1e3a5f;
-        }
-
-        .project-card a {
-            text-decoration: none;
-            color: #1e3a5f;
-            font-weight: 600;
-        }
-
-        .contact a {
-            color: #1e3a5f;
-            text-decoration: none;
-            font-weight: 600;
+        .project-card:hover {
+            transform: translateY(-5px);
         }
 
         footer {
             text-align: center;
-            margin-top: 30px;
+            padding: 20px;
+            margin-top: 40px;
             font-size: 14px;
             color: #666;
         }
@@ -110,72 +77,92 @@
 </head>
 <body>
 
+<!-- HERO / HEADER -->
 <header>
-    <h1>Harsh Chaubey</h1>
-    <p>Laravel Developer | Backend Engineer</p>
+    <h1 class="fw-bold">Harsh Chaubey</h1>
+    <p class="fs-5">Laravel Developer | Backend Engineer</p>
 </header>
 
 <div class="container">
 
-    <section>
-        <h2>👤 About Me</h2>
+    <!-- ABOUT -->
+    <div class="section-card">
+        <h3 class="section-title">👤 About Me</h3>
         <p>
-            I am a backend-focused Laravel Developer with hands-on experience in building
+            Backend-focused Laravel Developer with hands-on experience in building
             scalable web applications, REST APIs, and database-driven systems.
             I enjoy writing clean, secure, and maintainable code.
         </p>
-    </section>
+    </div>
 
-    <section>
-        <h2>🛠 Skills</h2>
-        <ul>
-            <li><strong>Backend:</strong> Laravel (PHP), REST APIs</li>
-            <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
-            <li><strong>Database:</strong> MySQL</li>
-            <li><strong>Tools:</strong> VS Code, Git</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>💼 Experience</h2>
-        <ul>
-            <li>
-                <strong>Backend Developer Intern (Laravel)</strong> – Technobren Infotech Pvt. Ltd.<br>
-                Working on Laravel MVC architecture, REST APIs, authentication, and database design.
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>📁 Projects</h2>
-
-        <div class="projects">
-            <div class="project-card">
-                <h3>UP-TOUR</h3>
-                <p>Responsive travel website built with HTML, CSS, JavaScript, Bootstrap & Django.</p>
-                <a href="#" target="_blank">🔗 Live</a> |
-                <a href="#" target="_blank">💻 GitHub</a>
-            </div>
-
-            <div class="project-card">
-                <h3>PET-CARE</h3>
-                <p>Web application for managing pet care services and health wellness.</p>
-                <a href="#" target="_blank">🔗 Live</a> |
-                <a href="#" target="_blank">💻 GitHub</a>
-            </div>
+    <!-- SKILLS -->
+    <div class="section-card">
+        <h3 class="section-title">🛠 Skills</h3>
+        <div>
+            <span class="skill-badge">Laravel</span>
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">REST APIs</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">Git</span>
         </div>
-    </section>
+    </div>
 
-    <section class="contact">
-        <h2>📬 Contact</h2>
+    <!-- EXPERIENCE -->
+    <div class="section-card">
+        <h3 class="section-title">💼 Experience</h3>
+        <p class="mb-1 fw-semibold">
+            Backend Developer Intern (Laravel) – Technobren Infotech Pvt. Ltd.
+        </p>
+        <p class="text-muted mb-0">
+            Working on Laravel MVC architecture, REST APIs, authentication,
+            authorization, and MySQL database design.
+        </p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section-card">
+        <h3 class="section-title">📁 Projects</h3>
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="card project-card p-3">
+                    <h5 class="fw-bold">UP-TOUR</h5>
+                    <p>
+                        Responsive travel website using HTML, CSS, JavaScript,
+                        Bootstrap & Django.
+                    </p>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card project-card p-3">
+                    <h5 class="fw-bold">PET-CARE</h5>
+                    <p>
+                        Web application for managing pet care services and
+                        health wellness.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section-card">
+        <h3 class="section-title">📬 Contact</h3>
+        <p class="mb-1">📍 Jaunpur, Uttar Pradesh</p>
+        <p class="mb-1">
+            📧 <a href="mailto:harshchaubey566@gmail.com">harshchaubey566@gmail.com</a>
+        </p>
         <p>
-            📍 Jaunpur, Uttar Pradesh<br>
-            📧 <a href="mailto:harshchaubey566@gmail.com">harshchaubey566@gmail.com</a><br>
             🔗 <a href="https://www.linkedin.com/in/harsh-chaubey-794657321" target="_blank">
                 LinkedIn Profile
             </a>
         </p>
-    </section>
+    </div>
 
 </div>
 
