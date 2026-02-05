@@ -26,6 +26,15 @@
             padding: 50px 20px;
         }
 
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
         header h1 {
             margin: 0;
             font-size: 34px;
@@ -62,6 +71,29 @@
             line-height: 1.6;
         }
 
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            border: 1px solid #e5e7eb;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #1e3a5f;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
         .contact a {
             color: #1e3a5f;
             text-decoration: none;
@@ -78,9 +110,10 @@
 </head>
 <body>
 
-
+<header>
     <h1>Harsh Chaubey</h1>
     <p>Laravel Developer | Backend Engineer</p>
+</header>
 
 <div class="container">
 
@@ -107,8 +140,7 @@
         <h2>💼 Experience</h2>
         <ul>
             <li>
-                <strong>Backend Developer Intern (Laravel)</strong> – Technobren Infotech Pvt. Ltd.
-                <br>
+                <strong>Backend Developer Intern (Laravel)</strong> – Technobren Infotech Pvt. Ltd.<br>
                 Working on Laravel MVC architecture, REST APIs, authentication, and database design.
             </li>
         </ul>
@@ -116,14 +148,22 @@
 
     <section>
         <h2>📁 Projects</h2>
-        <ul>
-            <li>
-                <strong>UP-TOUR:</strong> Travel website using HTML, CSS, JavaScript, Bootstrap & Django
-            </li>
-            <li>
-                <strong>PET-CARE:</strong> Web application for managing pet care services
-            </li>
-        </ul>
+
+        <div class="projects">
+            <div class="project-card">
+                <h3>UP-TOUR</h3>
+                <p>Responsive travel website built with HTML, CSS, JavaScript, Bootstrap & Django.</p>
+                <a href="#" target="_blank">🔗 Live</a> |
+                <a href="#" target="_blank">💻 GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>PET-CARE</h3>
+                <p>Web application for managing pet care services and health wellness.</p>
+                <a href="#" target="_blank">🔗 Live</a> |
+                <a href="#" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
     </section>
 
     <section class="contact">
@@ -145,5 +185,3 @@
 
 </body>
 </html>
-
-
